@@ -1,0 +1,57 @@
+:root {
+  --icons-color: #65a2ff;
+
+  --titulos: "Catamaran", sans-serif;
+  --subtitulos: "Doppio One", sans-serif;
+  --descripciones: "Hind Vadodara", sans-serif;
+}
+
+*,
+::after ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--titulos);
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+b {
+  font-size: 17px;
+  font-family: var(--subtitulos);
+}
+
+p,
+em,
+u {
+  font-size: 16.5px;
+  font-family: var(--descripciones);
+}
