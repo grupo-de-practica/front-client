@@ -7,16 +7,15 @@
 }
 
 *,
-::after ::before {
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background-color: #e6e6e6;
-  display: flex;
-  justify-content: center;
-  padding: 100px;
+  background-color: #f9f9f9;
+  padding: 0 2%;
 }
 
 h1,
@@ -27,7 +26,9 @@ h5,
 h6 {
   font-family: var(--titulos);
 }
-
+h1 {
+  font-size: 28px;
+}
 h2 {
   font-size: 26px;
 }
@@ -45,7 +46,13 @@ h5 {
 }
 
 b {
-  font-size: 17px;
+  font-size: 16.5px;
+  font-family: var(--subtitulos);
+}
+
+a {
+  font-size: 16px;
+  text-decoration: none;
   font-family: var(--subtitulos);
 }
 

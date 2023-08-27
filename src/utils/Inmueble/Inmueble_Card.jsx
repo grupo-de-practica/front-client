@@ -16,7 +16,7 @@ const Main = styled.div`
   max-width: 300px;
   border-radius: 10px;
   overflow: hidden;
-  gap: 3px;
+  gap: 5px;
   background-color: white;
 `;
 const Iconos = styled.img`
@@ -68,7 +68,7 @@ const Datos = styled.div`
   align-items: center;
   height: 20px;
   gap: 2px;
-  
+
   p {
     font-size: 15px;
     white-space: nowrap;
