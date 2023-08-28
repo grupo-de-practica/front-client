@@ -18,7 +18,7 @@ const Contenedor_Titulo_Button = styled.div`
 `;
 const Contenedor_Inmuebles = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 35px 2.5%;
 `;

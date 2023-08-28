@@ -26,7 +26,7 @@ const Ofrecemos = () => {
   return (
     <>
       <Main>
-        <h1>¿No sabes donde iniciar?</h1>
+        <h1>¿Perdido en el Mundo Inmobiliario?</h1>
 
         <Review>
           <Servicios

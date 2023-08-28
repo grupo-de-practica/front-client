@@ -28,6 +28,19 @@ const Contenedor_Filtros = styled.div`
   display: flex;
   width: 100%;
 `;
+const Titulo = styled.div`
+  display: flex;
+  gap: 8px;
+  h1 {
+    font-size: 28px;
+
+  }
+  em {
+    font-size: 26px;
+    color: var(--icons-color);
+    font-weight: 500;
+  }
+`;
 
 const Filtro = () => {
   const ubicacionArray = {
@@ -70,7 +83,11 @@ const Filtro = () => {
   return (
     <>
       <Main>
-        <h1>¡ Encuentra tu casa ideal !</h1>
+        <Titulo>
+        <h1>¡ Encuentra tu</h1>
+        <em>hogar ideal </em>
+        <h1> ! </h1>
+        </Titulo>
 
         <Contenedor_Button_Filtros>
           <Contenedor_Filtros>
