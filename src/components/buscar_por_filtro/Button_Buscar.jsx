@@ -6,12 +6,12 @@ const Btn = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 8px;
   height: 38px;
-  width: max-content;
+  width: 250px;
   border-radius: 5px;
-  padding: 0 14px 0 12px;
+  padding: 0 15px;
   background-color: var(--icons-color);
   border: none;
   color: white;
@@ -20,8 +20,8 @@ const Btn = styled.button`
   }
 
   img {
-    height: 18px;
-    width: 18px;
+    height: 20px;
+    width: 20px;
     object-fit: cover;
     position: relative;
     top: 1px;
@@ -33,7 +33,7 @@ const Button_Buscar = () => {
     <>
       <Btn>
         <img src={Buscar_Icono} alt="" />
-        <p>Buscar</p>
+        <p>Buscar mi propiedad</p>
       </Btn>
     </>
   );
