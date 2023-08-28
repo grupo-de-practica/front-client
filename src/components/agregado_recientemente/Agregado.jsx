@@ -7,7 +7,7 @@ const Main = styled.section`
   flex-direction: column;
   background-color: #ebebeb;
   border-radius: 10px;
-  padding: 20px 2%;
+  padding: 20px 2% 35px 2%;
   gap: 20px;
 `;
 const Contenedor_Titulo_Button = styled.div`

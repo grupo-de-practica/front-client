@@ -6,7 +6,7 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 340px;
+  max-width: 380px;
   background-color: #3d3d3c;
   border-radius: 5px;
 

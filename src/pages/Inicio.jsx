@@ -8,6 +8,7 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-bottom: 100px;
 `;
 const Inicio = () => {
   return (

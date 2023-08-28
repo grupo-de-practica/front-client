@@ -11,7 +11,7 @@ const Main = styled.section`
   flex-direction: column;
   background-color: #252525;
   border-radius: 10px;
-  padding: 20px 2%;
+  padding: 20px 2% 35px 2%;
   gap: 20px;
   h1 {
     color: white;
@@ -19,7 +19,7 @@ const Main = styled.section`
 `;
 const Review = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 
 const Ofrecemos = () => {
