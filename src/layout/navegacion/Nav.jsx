@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import Logo_Icono from "@/assets/img/logo_inmobiliaria.jpg";
@@ -49,6 +50,9 @@ const Btn = styled.div`
 `;
 
 const Nav = () => {
+  const navigate = useNavigate()
+
+  const clickIngresar = () => navigate("/ingresar")
   return (
     <>
       <Navegacion>
@@ -57,13 +61,13 @@ const Nav = () => {
         </Logo>
 
         <Contenedor_Enlaces>
-          <Enlaces href="">Inicio</Enlaces>
+          <Enlaces href="/">Inicio</Enlaces>
           <Enlaces href="">Explorar</Enlaces>
           <Enlaces href="">Informacion</Enlaces>
           <Enlaces href="">Guardado</Enlaces>
         </Contenedor_Enlaces>
 
-        <Btn type="button">
+        <Btn type="button" onClick={clickIngresar}>
           <p>Ingresar</p>
         </Btn>
       </Navegacion>

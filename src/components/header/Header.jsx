@@ -94,15 +94,15 @@ const Header = () => {
           </p>
           <Contenedor_Contador>
             <div>
-              <b>8.5k</b>
+              <b>8.5K</b>
 
               <p>Propiedades vendidas</p>
             </div>
 
             <div>
-              <b>8.0k</b>
+              <b>6.1k</b>
 
-              <p>Clientes satisfechos</p>
+              <p>Propiedades en venta</p>
             </div>
           </Contenedor_Contador>
         </Informacion>
