@@ -5,17 +5,19 @@ import Imagen_1 from "@/assets/img/pick1.jpg";
 const Main = styled.section`
   display: flex;
   justify-content: space-between;
-  gap: 3%;
+  gap: 35px;
 `;
 const Contenedor_Mapa = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 650px;
+  max-width: 600px;
+  height: 250px;
   background-color: #ebebeb;
   border-radius: 10px;
   gap: 20px;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   img {
     height: 100%;
     width: 100%;
@@ -26,11 +28,12 @@ const Contenedor_Desc = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 670px;
+  max-width: 800px;
   background-color: #ebebeb;
   border-radius: 10px;
   padding: 20px 2% 20px 2%;
   gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 `;
 const Contenedor_Texto = styled.div`
   display: flex;

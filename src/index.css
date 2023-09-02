@@ -15,7 +15,7 @@
 }
 body {
   background-color: #f9f9f9;
-  padding: 0 2%;
+ 
 }
 
 h1,
@@ -56,8 +56,8 @@ a {
   font-family: var(--subtitulos);
 }
 
-
 p,
+td,
 em,
 u {
   font-size: 16.5px;

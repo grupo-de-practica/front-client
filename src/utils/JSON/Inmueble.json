@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "addres": " Asturias 77Asturias 77 das",
+    "latitude": -27.4833,
+    "longitude": -58.7825,
+    "price": 93,
+    "type": "Departamento",
+    "is_published": true,
+    "created_at": "2023-08-31",
+    "deleted_at": null,
+    "images": [
+      {
+        "id": 1,
+        "name": "https://http2.mlstatic.com/D_NQ_NP_771028-MLC70867720793_082023-O.webp",
+        "order": 1,
+        "type": "property",
+        "created_at": "2023-08-31",
+        "deleted_at": null
+      },
+      {
+        "id": 2,
+        "name": "https://http2.mlstatic.com/D_NQ_NP_916225-MLC70835100036_082023-O.webp",
+        "order": 2,
+        "type": "property",
+        "created_at": "2023-08-31",
+        "deleted_at": null
+      },
+      {
+        "id": 3,
+        "name": "https://http2.mlstatic.com/D_NQ_NP_851043-MLC70867704269_082023-O.webp",
+        "order": 3,
+        "type": "property",
+        "created_at": "2023-08-31",
+        "deleted_at": null
+      },
+      {
+        "id": 4,
+        "name": "https://http2.mlstatic.com/D_NQ_NP_876123-MLC70835108844_082023-O.webp",
+        "order": 4,
+        "type": "property",
+        "created_at": "2023-08-31",
+        "deleted_at": null
+      },
+      {
+        "id": 5,
+        "name": "https://http2.mlstatic.com/D_NQ_NP_2X_784264-MLC70867997557_082023-F.webp",
+        "order": 5,
+        "type": "property",
+        "created_at": "2023-08-31",
+        "deleted_at": null
+      },
+      {
+        "id": 6,
+        "name": "https://http2.mlstatic.com/D_NQ_NP_2X_994624-MLC70835051254_082023-F.webp",
+        "order": 6,
+        "type": "property",
+        "created_at": "2023-08-31",
+        "deleted_at": null
+      },
+      {
+        "id": 7,
+        "name": "https://http2.mlstatic.com/D_NQ_NP_2X_914276-MLC70835275424_082023-F.webp",
+        "order": 7,
+        "type": "property",
+        "created_at": "2023-08-31",
+        "deleted_at": null
+      },
+      {
+        "id": 8,
+        "name": "https://http2.mlstatic.com/D_Q_NP_2X_885253-MLC70920256110_082023-R.webp",
+        "order": 8,
+        "type": "plane",
+        "created_at": "2023-08-31",
+        "deleted_at": null
+      },
+      {
+        "id": 9,
+        "name": "https://http2.mlstatic.com/D_NQ_NP_2X_739786-MLC70868048555_082023-F.webp",
+        "order": 9,
+        "type": "property",
+        "created_at": "2023-08-31",
+        "deleted_at": null
+      }
+    ],
+    "feature": {
+      "util_area": 215232,
+      "total_area": 215232,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "kitchens": 1,
+      "floors": 1
+    },
+    "zones": {
+      "Transporte": [
+        {
+          "id": 1,
+          "addres": "Asturias 77, Santiago, Las Condes",
+          "latitude": -27.4833,
+          "longitude": -58.7825
+        }
+      ],
+      "Comercios": [
+        {
+          "id": 1,
+          "addres": "Asturias 77, Santiago, Las Condes",
+          "latitude": -27.4833,
+          "longitude": -58.7825
+        }
+      ],
+      "Salud": [
+        {
+          "id": 1,
+          "addres": "Asturias 77, Santiago, Las Condes",
+          "latitude": -27.4833,
+          "longitude": -58.7825
+        },
+        {
+          "id": 2,
+          "addres": "Asturias 77, Santiago, Las Condes",
+          "latitude": -27.4833,
+          "longitude": -58.7825
+        }
+      ],
+      "Educacion": [
+        {
+          "id": 1,
+          "addres": "Asturias 77, Santiago, Las Condes",
+          "latitude": -27.4833,
+          "longitude": -58.7825
+        },
+        {
+          "id": 2,
+          "addres": "Asturias 77, Santiago, Las Condes",
+          "latitude": -27.4833,
+          "longitude": -58.7825
+        }
+      ],
+      "Areas verdes": [
+        {
+          "id": 1,
+          "addres": "Asturias 77, Santiago, Las Condes",
+          "latitude": -27.4833,
+          "longitude": -58.7825
+        },
+        {
+          "id": 2,
+          "addres": "Asturias 77, Santiago, Las Condes",
+          "latitude": -27.4833,
+          "longitude": -58.7825
+        }
+      ]
+    }
+  }
+]

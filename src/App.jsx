@@ -5,6 +5,7 @@ import Nav from "@/layout/navegacion/Nav";
 import InicioPage from "./pages/InicioPage";
 import IngresarPage from './pages/IngresarPage'
 import RegistrarsePage from "./pages/RegistrarsePage";
+import InmueblePage from "./pages/InmueblePage";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/" element={<InicioPage />} />
           <Route path="/ingresar" element={<IngresarPage />} />
           <Route path="/registrarse" element={<RegistrarsePage />} />
+          <Route path="/inmueble/id" element={<InmueblePage />} />
         </Routes>
       </BrowserRouter>
     </>

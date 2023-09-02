@@ -18,6 +18,7 @@ const Main = styled.section`
   border-radius: 10px;
   padding: 20px 2% 35px 2%;
   gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 `;
 const Contenedor_Button_Filtros = styled.div`
   display: flex;

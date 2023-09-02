@@ -8,12 +8,33 @@ const Main = styled.div`
   width: 100%;
   max-width: 380px;
   background-color: #3d3d3c;
-  border-radius: 5px;
-
+  border-radius: 5px 5px 0 5px;
+  overflow: hidden;
   position: relative;
   b,
   p {
     color: white;
+  }
+`;
+const StyledBorderRadius = styled.span`
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  bottom: 0;
+  right: 60px;
+  z-index: 1;
+  ::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border-radius: 0 0 50% 0;
+    background-color: #252525;
   }
 `;
 const Contenedor_Texto = styled.div`
@@ -65,6 +86,8 @@ const Servicios = ({ name, desc, href, img }) => {
   return (
     <>
       <Main>
+        <StyledBorderRadius />
+
         <Contenedor_Texto>
           <b>{name}</b>
           <p>{desc}</p>

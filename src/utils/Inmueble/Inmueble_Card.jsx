@@ -23,10 +23,10 @@ const Iconos = styled.img`
   height: 18px;
   width: 18px;
 `;
-const Imagen = styled.div`
+const Imagen = styled.a`
   width: 100%;
   height: 100%;
-
+  cursor: pointer;
   img {
     width: 100%;
     height: 100%;
@@ -65,10 +65,9 @@ const Contenedor_Adicional = styled.div`
 `;
 const Datos = styled.div`
   display: flex;
-  align-items: center;
+  align-items: end;
   height: 20px;
-  gap: 2px;
-
+  gap: 2.5px;
   p {
     font-size: 15px;
     white-space: nowrap;
@@ -82,7 +81,7 @@ const Inmueble_Card = () => {
   return (
     <>
       <Main>
-        <Imagen>
+        <Imagen href='/inmueble/id'>
           <img src={ArrayImagen[0]} alt="" />
         </Imagen>
         <Informacion>
