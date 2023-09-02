@@ -95,11 +95,11 @@ const Propiedades_Imagenes = ({ arraySrcPropiedades }) => {
     (item) => item.type === "property"
   );
 
-  const derecha = () => setTodaLasImagenes(srcPropiedades.slice(7, 13));
-  const izquierda = () => setTodaLasImagenes(srcPropiedades.slice(0, 7));
+  const derecha = () => setTodaLasImagenes(srcPropiedades.slice(6, 12));
+  const izquierda = () => setTodaLasImagenes(srcPropiedades.slice(0, 6));
 
   const [todaLasImagenes, setTodaLasImagenes] = useState(
-    srcPropiedades.slice(0, 7)
+    srcPropiedades.slice(0, 6)
   );
   const [clickImage, setClickImage] = useState(srcPropiedades[0].name);
   return (

@@ -6,12 +6,12 @@ import Corazon_Solido from "@/assets/icons/heart_solid.svg";
 import Corazon_Outline from "@/assets/icons/heart-outline.svg";
 
 const Position_Fixed = styled.div`
-  position: fixed;
+  position: relative;
   border: 1px solid #ddd;
   width: 350px;
-  border-radius: 20px;
-  height: 82.3vh;
-  right: 2%;
+  border-radius: 10px;
+  height: 500px;
+
   overflow: hidden;
 `;
 const Main = styled.div`
@@ -26,7 +26,6 @@ const Ubicacion = styled.div`
   display: flex;
   width: 100%;
   text-align: left;
-  border: 1px solid black;
 `;
 const Guardado = styled.img`
   cursor: pointer;
@@ -44,7 +43,7 @@ const Button = styled.button`
   height: 40px;
   width: 100%;
   max-width: 250px;
-margin: auto auto 0 auto;
+  margin: auto auto 0 auto;
 
   border-radius: 5px;
   gap: 8px;

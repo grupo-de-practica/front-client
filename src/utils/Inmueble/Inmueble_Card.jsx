@@ -13,7 +13,7 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 300px;
+  max-width: 380px;
   border-radius: 10px;
   overflow: hidden;
   gap: 5px;
@@ -25,7 +25,7 @@ const Iconos = styled.img`
 `;
 const Imagen = styled.a`
   width: 100%;
-  height: 100%;
+  height: 200px;
   cursor: pointer;
   img {
     width: 100%;

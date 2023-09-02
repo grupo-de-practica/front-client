@@ -16,7 +16,7 @@ const Contenedor = styled.div`
   flex-direction: column;
   gap: calc(30px + 15px);
   width: 100%;
-  max-width: 950px;
+  max-width: 850px;
 `;
 
 const Inmueble = () => {
