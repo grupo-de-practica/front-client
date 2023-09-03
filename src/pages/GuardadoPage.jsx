@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import Inmueble from "@/components/inmueble_solo/Inmueble";
+import Guardado from "@/components/usuario_guardado/Guardado";
 
 const Main = styled.main`
   display: flex;
@@ -16,15 +16,14 @@ const Main = styled.main`
     padding: 0;
   }
 `;
-
-const InmueblePage = () => {
+const GuardadoPage = () => {
   return (
     <>
       <Main>
-        <Inmueble />
+        <Guardado />
       </Main>
     </>
   );
 };
 
-export default InmueblePage;
+export default GuardadoPage;

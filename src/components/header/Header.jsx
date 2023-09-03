@@ -30,9 +30,6 @@ const Contenedor_Mapa = styled.div`
     width: 100%;
     object-fit: cover;
   }
-
-
-
   @media (max-width: 650px) {
     height: 250px;
     margin: auto;

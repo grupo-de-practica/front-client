@@ -1,6 +1,5 @@
+import Informacion from "@/components/informacion_ayuda/Informacion";
 import styled from "styled-components";
-
-import Inmueble from "@/components/inmueble_solo/Inmueble";
 
 const Main = styled.main`
   display: flex;
@@ -17,14 +16,14 @@ const Main = styled.main`
   }
 `;
 
-const InmueblePage = () => {
+const InformacionPage = () => {
   return (
     <>
       <Main>
-        <Inmueble />
+        <Informacion />
       </Main>
     </>
   );
 };
 
-export default InmueblePage;
+export default InformacionPage;
