@@ -6,8 +6,9 @@ const Main = styled.div`
   justify-content: center;
   align-items: start;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   position: relative;
+
 `;
 
 const Seleccionado = styled.div`
@@ -28,6 +29,10 @@ const Seleccionado = styled.div`
 
   p {
     font-weight: 500;
+  }
+  @media (max-width: 650px) {
+    border-radius: 10px;
+    border: none;
   }
 `;
 const Contenedor_Opciones = styled.div`

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
@@ -42,6 +42,21 @@ const StyledNavLink = styled(NavLink)`
     transform: scale(1.05);
   }
 `;
+const Btn = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--icons-color);
+  color: white;
+  font-weight: 500;
+  height: 35px;
+  width: 150px;
+  border-radius: 5px;
+  padding: 0 15px;
+  cursor: pointer;
+`;
+
 const variants = {
   open: {
     clipPath: `inset(0 0 0 0)`,
@@ -53,6 +68,8 @@ const variants = {
 };
 
 const Mobile = () => {
+  const navigate = useNavigate();
+  const clickIngresar = () => navigate("/ingresar");
   return (
     <>
       <Main
@@ -67,6 +84,10 @@ const Mobile = () => {
           <StyledNavLink to="explorar">Explorar</StyledNavLink>
           <StyledNavLink to="informacion">Informacion</StyledNavLink>
           <StyledNavLink to="guardado">Guardado</StyledNavLink>
+
+          <Btn type="button" onClick={clickIngresar}>
+            <p>Ingresar</p>
+          </Btn>
         </Enlaces_Contenedor>
       </Main>
     </>

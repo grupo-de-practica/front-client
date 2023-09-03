@@ -7,19 +7,15 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 950px;
-
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
+  background-color: var(--background-white);
+  overflow: hidden;
+  border-radius: 10px ;
 `;
 const Image = styled.div`
   display: block;
-  height: 500px;
-  width: 100%;
-  border-radius: 10px 10px 0 0;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
   overflow: hidden;
-
   img {
     width: 100%;
     height: 100%;
@@ -28,17 +24,15 @@ const Image = styled.div`
 `;
 const AllImages = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   grid-gap: 20px;
-
   position: relative;
-  background-color: #ebebeb;
-  border-radius: 0 0 10px 10px;
-  padding: 15px 35px;
+  border-radius: 10px;
+  padding: 25px 30px;
 `;
 const Vista_previa = styled.div`
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   cursor: pointer;
   border-radius: 15px;
   overflow: hidden;
@@ -49,7 +43,6 @@ const Vista_previa = styled.div`
     height: 100%;
     object-fit: cover;
   }
-
   :hover {
     img {
       transform: scale(1.15);
@@ -62,13 +55,13 @@ const Flecha_izquierda = styled.div`
   justify-content: center;
   position: absolute;
   height: 100%;
-  width: 35px;
+  width: 30px;
   z-index: 1;
   left: 0;
   top: 0;
   img {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     cursor: pointer;
   }
 `;
@@ -78,13 +71,13 @@ const Flecha_derecha = styled.div`
   justify-content: center;
   position: absolute;
   height: 100%;
-  width: 35px;
+  width: 30px;
   z-index: 1;
   right: 0;
   top: 0;
   img {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     transform: rotate(180deg);
     cursor: pointer;
   }
@@ -95,11 +88,11 @@ const Propiedades_Imagenes = ({ arraySrcPropiedades }) => {
     (item) => item.type === "property"
   );
 
-  const derecha = () => setTodaLasImagenes(srcPropiedades.slice(6, 12));
-  const izquierda = () => setTodaLasImagenes(srcPropiedades.slice(0, 6));
+  const derecha = () => setTodaLasImagenes(srcPropiedades.slice(7, 14));
+  const izquierda = () => setTodaLasImagenes(srcPropiedades.slice(0, 7));
 
   const [todaLasImagenes, setTodaLasImagenes] = useState(
-    srcPropiedades.slice(0, 6)
+    srcPropiedades.slice(0, 7)
   );
   const [clickImage, setClickImage] = useState(srcPropiedades[0].name);
   return (

@@ -5,6 +5,7 @@ import Imagen_1 from "@/assets/img/pick1.jpg";
 const Main = styled.section`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 35px;
 `;
 const Contenedor_Mapa = styled.div`
@@ -13,7 +14,7 @@ const Contenedor_Mapa = styled.div`
   width: 100%;
   max-width: 600px;
   height: 250px;
-  background-color: #eeeeee;
+  background-color: var(--background-white);
   border-radius: 10px;
   gap: 20px;
   overflow: hidden;
@@ -22,16 +23,24 @@ const Contenedor_Mapa = styled.div`
     width: 100%;
     object-fit: cover;
   }
+  @media (max-width: 650px) {
+    border-radius: 0;
+    height: 200px;
+  }
 `;
 const Contenedor_Desc = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 800px;
-  background-color: #eeeeee;
+  max-width: 650px;
+  background-color: var(--background-white);
   border-radius: 10px;
   padding: 20px 2% 20px 2%;
   gap: 20px;
+
+  @media (max-width: 650px) {
+    border-radius: 0;
+  }
 `;
 const Contenedor_Texto = styled.div`
   display: flex;
@@ -62,7 +71,6 @@ const Informacion = styled.div`
 const Contenedor_Contador = styled.div`
   display: flex;
   justify-content: space-between;
-  
 
   div {
     display: flex;
@@ -76,6 +84,13 @@ const Contenedor_Contador = styled.div`
       font-weight: 500;
       font-size: 18px;
       color: #3e3e3e;
+    }
+  }
+  @media (max-width: 650px) {
+    div {
+      p {
+        font-size: 15px;
+      }
     }
   }
 `;

@@ -9,9 +9,9 @@ const Btn = styled.button`
   justify-content: space-between;
   gap: 8px;
   height: 38px;
-  width: 250px;
+  width: 200px;
   border-radius: 5px;
-  padding: 0 15px;
+  padding: 0 10px;
   background-color: var(--icons-color);
   border: none;
   color: white;
@@ -25,6 +25,10 @@ const Btn = styled.button`
     object-fit: cover;
     position: relative;
     top: 1px;
+  }
+
+  @media (max-width: 650px) {
+    margin: 25px auto 0 auto;
   }
 `;
 

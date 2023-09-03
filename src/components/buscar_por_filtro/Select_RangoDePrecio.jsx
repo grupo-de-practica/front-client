@@ -8,6 +8,8 @@ const Main = styled.div`
   width: 100%;
   max-width: 300px;
   position: relative;
+
+
 `;
 
 const Seleccionado = styled.div`
@@ -19,7 +21,7 @@ const Seleccionado = styled.div`
   background-color: white;
   width: 100%;
   gap: 10px;
-  border-radius: 0 10px 10px 0;
+
   padding: 15px 40px 15px 20px;
   img {
     height: 18px;
@@ -28,6 +30,10 @@ const Seleccionado = styled.div`
 
   p {
     font-weight: 500;
+  }
+  @media (max-width: 650px) {
+    border-radius: 10px;
+    border: none;
   }
 `;
 const Contenedor_Opciones = styled.div`

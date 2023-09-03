@@ -18,27 +18,38 @@ const Main = styled.section`
   border-radius: 10px;
   padding: 20px 2% 35px 2%;
   gap: 20px;
+
+  @media (max-width: 650px) {
+    border-radius: 0;
+  }
 `;
 const Contenedor_Button_Filtros = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 const Contenedor_Filtros = styled.div`
   display: flex;
   width: 100%;
+  max-width: 900px;
+  @media (max-width: 650px) {
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 `;
 const Titulo = styled.div`
   display: flex;
   gap: 8px;
-  h1 {
-    font-size: 28px;
 
-  }
   em {
     font-size: 26px;
-    color: var(--icons-color);
     font-weight: 500;
+  }
+
+  @media (max-width: 650px) {
+    justify-content: center;
   }
 `;
 
@@ -84,9 +95,8 @@ const Filtro = () => {
     <>
       <Main>
         <Titulo>
-        <h1>¡ Encuentra tu</h1>
-        <em>hogar ideal </em>
-        <h1> ! </h1>
+          <h1>Encuentra tu</h1>
+          <em>hogar ideal </em>
         </Titulo>
 
         <Contenedor_Button_Filtros>
@@ -96,16 +106,15 @@ const Filtro = () => {
               value={ubicacionSeleccionado}
               setValue={setUbicacionSeleccionado}
             />
-            <Select_TipoDeInmueble
-              data={tipoDeInmueble}
-              value={tipoSeleccionado}
-              setValue={setTipoSeleccionado}
-            />
-
             <Select_RangoDePrecio
               data={rangoDePrecio}
               value={rangoSeleccionado}
               setValue={setRangoSeleccionado}
+            />
+            <Select_TipoDeInmueble
+              data={tipoDeInmueble}
+              value={tipoSeleccionado}
+              setValue={setTipoSeleccionado}
             />
           </Contenedor_Filtros>
 

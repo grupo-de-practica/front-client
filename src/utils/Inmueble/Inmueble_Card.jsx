@@ -13,11 +13,15 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 380px;
+  max-width: 300px;
   border-radius: 10px;
   overflow: hidden;
   gap: 5px;
   background-color: white;
+
+  @media (max-width: 650px) {
+    margin: auto;
+  }
 `;
 const Iconos = styled.img`
   height: 18px;
@@ -25,7 +29,7 @@ const Iconos = styled.img`
 `;
 const Imagen = styled.a`
   width: 100%;
-  height: 200px;
+  height: 160px;
   cursor: pointer;
   img {
     width: 100%;
@@ -81,7 +85,7 @@ const Inmueble_Card = () => {
   return (
     <>
       <Main>
-        <Imagen href='/inmueble/id'>
+        <Imagen href="/inmueble/id">
           <img src={ArrayImagen[0]} alt="" />
         </Imagen>
         <Informacion>
@@ -102,12 +106,12 @@ const Inmueble_Card = () => {
 
             <Datos>
               <Iconos src={Room_Icono} alt="" />
-              <p>3 Habitaciones</p>
+              <p>3 Dormitorios</p>
             </Datos>
 
             <Datos>
               <Iconos src={Superficie_Icono} alt="" />
-              <p>83.59 mt</p>
+              <p>83.59 m2</p>
             </Datos>
           </Contenedor_Adicional>
         </Informacion>

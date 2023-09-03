@@ -6,8 +6,12 @@ const Main = styled.div`
   justify-content: center;
   align-items: start;
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   position: relative;
+  
+  @media (max-width: 650px) {
+    margin: auto;
+  }
 `;
 
 const Seleccionado = styled.div`
@@ -16,6 +20,7 @@ const Seleccionado = styled.div`
   justify-content: left;
   cursor: pointer;
   border-left: 1px solid #ddd;
+  border-radius: 0 10px 10px 0;
   background-color: white;
   width: 100%;
   gap: 10px;
@@ -27,6 +32,10 @@ const Seleccionado = styled.div`
 
   p {
     font-weight: 500;
+  }
+  @media (max-width: 650px) {
+    border-radius: 10px;
+    border: none;
   }
 `;
 const Contenedor_Opciones = styled.div`

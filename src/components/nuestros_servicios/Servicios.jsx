@@ -8,7 +8,7 @@ const Main = styled.div`
   width: 100%;
   max-width: 380px;
   background-color: #3d3d3c;
-  border-radius: 5px 5px 0 5px;
+  border-radius: 15px 15px 0 15px;
   overflow: hidden;
   position: relative;
   b,
@@ -22,12 +22,24 @@ const Contenedor_Texto = styled.div`
   gap: 5px;
   padding: 12px 18px;
   height: 80px;
+  p {
+    font-size: 16px;
+  }
+  .class {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  @media (max-width: 650px) {
+    height: max-content;
+  }
 `;
 const Imagen = styled.div`
   aspect-ratio: 16/9;
   width: 100%;
   height: 180px;
-  clip-path: polygon(5% 0, 95% 0, 100% 10%, 100% 100%, 0 100%, 0 10%);
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
   img {
     width: 100%;
     height: 100%;
@@ -65,10 +77,8 @@ const Servicios = ({ name, desc, href, img }) => {
   return (
     <>
       <Main>
-        
-
         <Contenedor_Texto>
-          <b>{name}</b>
+          <p className="class">{name}</p>
           <p>{desc}</p>
         </Contenedor_Texto>
 
