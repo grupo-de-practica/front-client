@@ -27,7 +27,7 @@ const Btn = styled.button`
     top: 1px;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 1000px) {
     margin: 25px auto 0 auto;
   }
 `;

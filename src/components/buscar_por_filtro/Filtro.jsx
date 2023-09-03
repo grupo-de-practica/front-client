@@ -28,15 +28,20 @@ const Contenedor_Button_Filtros = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (max-width: 1000px) {
+    justify-content: center;
+  }
 `;
 const Contenedor_Filtros = styled.div`
   display: flex;
   width: 100%;
   max-width: 900px;
-  @media (max-width: 650px) {
-    gap: 15px;
+
+  @media (max-width: 1000px) {
     justify-content: center;
     flex-wrap: wrap;
+    gap: 15px;
   }
 `;
 const Titulo = styled.div`

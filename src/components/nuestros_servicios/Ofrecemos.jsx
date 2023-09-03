@@ -26,6 +26,16 @@ const Review = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px 0;
+
+  @media (max-width: 1000px) {
+  justify-content: center;
+  gap: 25px 25px;
+  }
+
+  @media (max-width: 650px) {
+    justify-content: center;
+    gap: 20px;
+  }
 `;
 
 const Ofrecemos = () => {

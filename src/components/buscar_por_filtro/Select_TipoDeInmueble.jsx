@@ -5,13 +5,9 @@ const Main = styled.div`
   display: flex;
   justify-content: center;
   align-items: start;
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
   position: relative;
-  
-  @media (max-width: 650px) {
-    margin: auto;
-  }
+
 `;
 
 const Seleccionado = styled.div`
@@ -33,7 +29,7 @@ const Seleccionado = styled.div`
   p {
     font-weight: 500;
   }
-  @media (max-width: 650px) {
+  @media (max-width: 1000px) {
     border-radius: 10px;
     border: none;
   }

@@ -12,6 +12,9 @@ const Main = styled.main`
   margin-bottom: 100px;
   padding: 0 3.5%;
 
+  @media (max-width: 1000px) {
+    padding: 0 1%;
+  }
   @media (max-width: 650px) {
     padding: 0;
   }

@@ -5,8 +5,15 @@ import Imagen_1 from "@/assets/img/pick1.jpg";
 const Main = styled.section`
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 35px;
+
+  @media (max-width: 1000px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
 `;
 const Contenedor_Mapa = styled.div`
   display: flex;
@@ -23,10 +30,21 @@ const Contenedor_Mapa = styled.div`
     width: 100%;
     object-fit: cover;
   }
+
+
+
   @media (max-width: 650px) {
-    border-radius: 0;
-    height: 200px;
+    height: 250px;
+    margin: auto;
+    border-radius: 10px;
   }
+
+  @media (max-width: 600px) {
+    border-radius: 0;
+    height: 250px;
+  }
+
+
 `;
 const Contenedor_Desc = styled.div`
   display: flex;
