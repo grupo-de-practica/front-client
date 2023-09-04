@@ -5,7 +5,8 @@ const Main = styled.div`
   display: flex;
   justify-content: center;
   align-items: start;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   position: relative;
 `;
 
@@ -14,24 +15,18 @@ const Seleccionado = styled.div`
   align-items: center;
   justify-content: left;
   cursor: pointer;
-  border-left: 1px solid #ddd;
+  border: 1px solid #ddd;
   background-color: white;
   width: 100%;
-  gap: 10px;
-
-  padding: 15px 40px 15px 20px;
+  gap: 8px;
+  border-radius: 15px;
+  padding: 14px 15px;
   img {
     height: 18px;
     width: 18px;
   }
-
   p {
     font-weight: 500;
-   
-  }
-  @media (max-width: 1000px) {
-    border-radius: 10px;
-    border: none;
   }
 `;
 const Contenedor_Opciones = styled.div`

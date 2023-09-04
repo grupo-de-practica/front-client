@@ -16,12 +16,8 @@ const Main = styled.div`
   max-width: 300px;
   border-radius: 10px;
   overflow: hidden;
-  gap: 5px;
+  margin: auto;
   background-color: white;
-
-  @media (max-width: 650px) {
-    margin: auto;
-  }
 `;
 const Iconos = styled.img`
   height: 18px;
@@ -40,8 +36,10 @@ const Imagen = styled.a`
 const Informacion = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 5px;
   gap: 10px;
+  border: 1px solid #ddd;
+  border-color: transparent #ddd #ddd #ddd;
+  border-radius: 0 0 10px 10px;
 `;
 const Contenedor_Precio_Ubicacion = styled.div`
   display: flex;
@@ -50,13 +48,14 @@ const Contenedor_Precio_Ubicacion = styled.div`
 `;
 const Precio = styled.b`
   color: var(--icons-color);
+  font-weight: 600;
+  padding: 2px 5px;
 `;
 const Ubicacion = styled.div`
   display: flex;
   align-items: center;
-  height: 22px;
-  padding: 0 4px;
-  gap: 3px;
+  padding: 0 8px;
+  gap: 2px;
   p {
     color: grey;
   }
@@ -64,14 +63,17 @@ const Ubicacion = styled.div`
 const Contenedor_Adicional = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 8px 5px;
+  padding: 5px;
+  width: 95%;
+  margin: auto;
   border-top: 1px solid #ddd;
 `;
 const Datos = styled.div`
   display: flex;
-  align-items: end;
+  align-items: center;
   height: 20px;
   gap: 2.5px;
+
   p {
     font-size: 15px;
     white-space: nowrap;
@@ -106,12 +108,12 @@ const Inmueble_Card = () => {
 
             <Datos>
               <Iconos src={Room_Icono} alt="" />
-              <p>3 Dormitorios</p>
+              <p>3 Cuartos</p>
             </Datos>
 
             <Datos>
               <Iconos src={Superficie_Icono} alt="" />
-              <p>83.59 m2</p>
+              <p>83.59 m&sup2;</p>
             </Datos>
           </Contenedor_Adicional>
         </Informacion>

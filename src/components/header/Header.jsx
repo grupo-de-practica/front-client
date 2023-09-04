@@ -1,78 +1,55 @@
 import styled from "styled-components";
 
 import Imagen_1 from "@/assets/img/pick1.jpg";
+import Number_Contador from "./Number_Contador";
+import Titulo from "./Titulo";
 
-const Main = styled.section`
-  display: flex;
-  justify-content: space-between;
-  gap: 35px;
-
-  @media (max-width: 1000px) {
-    gap: 20px;
-  }
-
-  @media (max-width: 650px) {
-    flex-direction: column;
-  }
-`;
-const Contenedor_Mapa = styled.div`
+const Main = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 10px;
+
+  @media screen and (min-width: 769px) {
+    flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+  }
+`;
+const Contenedor_Desc = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroundSections0);
+  border-radius: var(--borderRadiusSection);
+  padding: var(--padddingSection);
   width: 100%;
-  max-width: 600px;
-  height: 250px;
-  background-color: var(--background-white);
-  border-radius: 10px;
+  max-width: 620px;
   gap: 20px;
+  @media screen and (min-width: 769px) {
+    height: 250px;
+  }
+`;
+
+const ContenedorImagen = styled.div`
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+  background-color: var(--backgroundSections0);
+  border-radius: var(--borderRadiusSection);
+  width: 100%;
+  max-width: 650px;
+  height: 180px;
+  gap: 20px;
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
-  @media (max-width: 650px) {
-    height: 250px;
-    margin: auto;
-    border-radius: 10px;
-  }
 
-  @media (max-width: 600px) {
-    border-radius: 0;
+  @media screen and (min-width: 769px) {
     height: 250px;
   }
-
-
 `;
-const Contenedor_Desc = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 650px;
-  background-color: var(--background-white);
-  border-radius: 10px;
-  padding: 20px 2% 20px 2%;
-  gap: 20px;
 
-  @media (max-width: 650px) {
-    border-radius: 0;
-  }
-`;
-const Contenedor_Texto = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: max-content;
-  justify-content: center;
-  align-items: center;
-  h1 {
-    font-size: 28px;
-  }
-  em {
-    font-weight: 500;
-    font-size: 24px;
-    position: relative;
-    left: -5px;
-  }
-`;
 const Informacion = styled.div`
   display: flex;
   margin-top: auto;
@@ -83,65 +60,26 @@ const Informacion = styled.div`
     color: #3e3e3e;
   }
 `;
-const Contenedor_Contador = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  div {
-    display: flex;
-    align-items: end;
-    gap: 10px;
-    b {
-      color: var(--icons-color);
-      font-size: 26px;
-    }
-    p {
-      font-weight: 500;
-      font-size: 18px;
-      color: #3e3e3e;
-    }
-  }
-  @media (max-width: 650px) {
-    div {
-      p {
-        font-size: 15px;
-      }
-    }
-  }
-`;
 
 const Header = () => {
   return (
     <Main>
       <Contenedor_Desc>
-        <Contenedor_Texto>
-          <h1>Compra propiedades</h1>
-          <em>de la forma más rápida</em>
-        </Contenedor_Texto>
+        <Titulo />
+
         <Informacion>
           <p>
             Nuestros agentes son el puente hacia tu nuevo hogar. Siempre aquí
             para disipar tus dudas y hacer realidad tus sueños inmobiliarios.
           </p>
-          <Contenedor_Contador>
-            <div>
-              <b>8.5K</b>
 
-              <p>Propiedades vendidas</p>
-            </div>
-
-            <div>
-              <b>6.1k</b>
-
-              <p>Propiedades en venta</p>
-            </div>
-          </Contenedor_Contador>
+          <Number_Contador />
         </Informacion>
       </Contenedor_Desc>
 
-      <Contenedor_Mapa>
+      <ContenedorImagen>
         <img src={Imagen_1} alt="" />
-      </Contenedor_Mapa>
+      </ContenedorImagen>
     </Main>
   );
 };

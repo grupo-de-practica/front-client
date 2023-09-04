@@ -2,14 +2,16 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+import Button_Pequeño from "@/utils/buttons/Button_Pequeño";
+
 const Main = styled(motion.div)`
   display: flex;
   justify-content: center;
   position: absolute;
   right: 0;
   top: 49px;
-  background-color: #252525;
-  width: 100%; /* Cambiar a 100% para ocupar todo el ancho */
+  background-color: var(--backgroundSections1);
+  width: 100%;
   z-index: 15;
   @media (min-width: 650px) {
     display: none;
@@ -42,20 +44,6 @@ const StyledNavLink = styled(NavLink)`
     transform: scale(1.05);
   }
 `;
-const Btn = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background-color: var(--icons-color);
-  color: white;
-  font-weight: 500;
-  height: 35px;
-  width: 150px;
-  border-radius: 5px;
-  padding: 0 15px;
-  cursor: pointer;
-`;
 
 const variants = {
   open: {
@@ -85,9 +73,11 @@ const Mobile = () => {
           <StyledNavLink to="informacion">Informacion</StyledNavLink>
           <StyledNavLink to="guardado">Guardado</StyledNavLink>
 
-          <Btn type="button" onClick={clickIngresar}>
-            <p>Ingresar</p>
-          </Btn>
+          <Button_Pequeño
+            texto="Ingresar"
+            type="button"
+            onClick={clickIngresar}
+          />
         </Enlaces_Contenedor>
       </Main>
     </>

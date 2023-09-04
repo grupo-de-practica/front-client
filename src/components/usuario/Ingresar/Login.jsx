@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 import Externo from "../Externo";
-import Email_Input from "../Email_Input";
-import Password_Input from "../Password_Input";
 import Button_Usuario from "../Button_Usuario";
+import Input_Con_Icono from "@/utils/input/Input_Con_Icono";
+
+import Password_Icono from "@/assets/icons/lock.svg";
+import Email_Icono from "@/assets/icons/at.svg";
 
 const Main = styled.div`
   display: flex;
@@ -55,8 +57,27 @@ const Login = () => {
         <Crear href="/registrarse">Crear cuenta</Crear>
 
         <Contenedor_Inputs>
-          <Email_Input />
-          <Password_Input  placeHolder='Repetir contraseña'/>
+          
+          <Input_Con_Icono
+            htmlAndId="Email"
+            labelText="Email:"
+            type="text"
+            placeHolder="Correo electronico"
+            src={Email_Icono}
+            // value=""
+            // onChange=""
+          />
+
+          <Input_Con_Icono
+            htmlAndId="Password"
+            labelText="Contraseña:"
+            type="password"
+            placeHolder="Contraseña"
+            src={Password_Icono}
+            // value=""
+            // onChange=""
+          />
+
           <Button_Usuario texto="Iniciar" />
 
           <Olvidaste>
@@ -65,7 +86,7 @@ const Login = () => {
           </Olvidaste>
         </Contenedor_Inputs>
 
-        <Externo texto='Iniciar con google'/>
+        <Externo texto="Iniciar con google" />
       </Main>
     </>
   );

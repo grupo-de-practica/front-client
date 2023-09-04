@@ -1,23 +1,23 @@
 import { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 
 import Mobile from "./Mobile";
+import Button_Pequeño from "@/utils/buttons/Button_Pequeño";
 
 import Menu_Icono from "@/assets/icons/menu.svg";
 import Logo_Icono from "@/assets/img/Logo.png";
-import { AnimatePresence } from "framer-motion";
 
 const Navegacion = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  padding: 0 1.5%;
-  background-color: #252525;
+  padding: var(--paddingNavigation);
+  background-color: var(--backgroundSections1);
   margin: 0 0 30px 0;
   position: relative;
-
 
   @media (max-width: 650px) {
     border-bottom: 2px solid #343434;
@@ -29,11 +29,12 @@ const Logo = styled.a`
   border-radius: 1px;
   cursor: pointer;
   position: relative;
-
   img {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    position: relative;
+    left: -10px;
   }
 `;
 const Contenedor_Enlaces = styled.div`
@@ -59,21 +60,6 @@ const StyledNavLink = styled(NavLink)`
   &:not(.active):hover {
     color: #c2dfff;
     transform: scale(1.05);
-  }
-`;
-const Btn = styled.button`
-  display: flex;
-  align-items: center;
-  border: none;
-  background-color: var(--icons-color);
-  color: white;
-  font-weight: 500;
-  height: 30px;
-  border-radius: 5px;
-  padding: 0 15px;
-  cursor: pointer;
-  @media (max-width: 650px) {
-    display: none;
   }
 `;
 const Btn_Menu = styled.button`
@@ -114,9 +100,13 @@ const Nav = () => {
           <StyledNavLink to="guardado">Guardado</StyledNavLink>
         </Contenedor_Enlaces>
 
-        <Btn type="button" onClick={clickIngresar}>
-          <p>Ingresar</p>
-        </Btn>
+        <Contenedor_Enlaces>
+          <Button_Pequeño
+            texto="Ingresar"
+            type="button"
+            onClick={clickIngresar}
+          />
+        </Contenedor_Enlaces>
 
         <Btn_Menu onClick={toggleMenu}>
           <img src={Menu_Icono} alt="" />

@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 import Externo from "../Externo";
-import Email_Input from "../Email_Input";
-import Password_Input from "../Password_Input";
 import Button_Usuario from "../Button_Usuario";
-import Numero_Input from "../Numero_Input";
-import Nombre_Input from "../Nombre_Input";
+
+import Input_Con_Icono from "@/utils/input/Input_Con_Icono";
+import Input_Telefono from "@/utils/input/Input_Telefono";
+
+import Email_Icono from "@/assets/icons/at.svg";
+import Nombre_Icono from "@/assets/icons/id_card.svg";
+import Password_Icono from "@/assets/icons/lock.svg";
 
 const Main = styled.div`
   display: flex;
@@ -45,11 +48,47 @@ const Registrarse = () => {
         <Crear href="/ingresar">Ingresar</Crear>
 
         <Contenedor_Inputs>
-          <Email_Input />
-          <Nombre_Input />
-          <Numero_Input />
-          <Password_Input placeHolder="Contraseña" />
-          <Password_Input placeHolder="Repetir contraseña" />
+          <Input_Con_Icono
+            htmlAndId="Email"
+            labelText="Email:"
+            type="text"
+            placeHolder="Correo electronico"
+            src={Email_Icono}
+            // value=""
+            // onChange=""
+          />
+
+          <Input_Con_Icono
+            htmlAndId="Name"
+            labelText="Nombre y apellido:"
+            type="text"
+            placeHolder="Nombre completo"
+            src={Nombre_Icono}
+            // value=""
+            // onChange=""
+          />
+          
+          <Input_Telefono />
+
+          <Input_Con_Icono
+            htmlAndId="Password"
+            labelText="Contraseña:"
+            type="password"
+            placeHolder="Contraseña"
+            src={Password_Icono}
+            // value=""
+            // onChange=""
+          />
+          <Input_Con_Icono
+            htmlAndId="Password_Confirm"
+            labelText="Confirmar contraseña:"
+            type="text"
+            placeHolder="Repetir contraseña"
+            src={Password_Icono}
+            // value=""
+            // onChange=""
+          />
+
           <Button_Usuario texto="Crear mi cuenta" />
         </Contenedor_Inputs>
 

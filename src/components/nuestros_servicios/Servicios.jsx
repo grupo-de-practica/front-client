@@ -8,7 +8,7 @@ const Main = styled.div`
   width: 100%;
   max-width: 350px;
   background-color: #3d3d3c;
-  border-radius: 15px 15px 0 15px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   b,
@@ -19,27 +19,20 @@ const Main = styled.div`
 const Contenedor_Texto = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  padding: 12px 18px;
-  height: 80px;
-  p {
-    font-size: 16px;
-  }
-  .class {
-    font-weight: 500;
-    font-size: 18px;
-  }
+  gap: 2px;
+  padding: 10px 15px;
 
-  @media (max-width: 650px) {
-    height: max-content;
+  .class {
+    font-weight: 600;
+    font-size: 18px;
   }
 `;
 const Imagen = styled.div`
   aspect-ratio: 16/9;
   width: 100%;
-  height: 180px;
-  border-radius: 5px 5px 0 0;
+  height: 160px;
   overflow: hidden;
+  margin-top: auto;
   img {
     width: 100%;
     height: 100%;
@@ -48,15 +41,14 @@ const Imagen = styled.div`
 `;
 const Background = styled.div`
   display: flex;
-  justify-content: right;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  border-radius: 50% 0 0 0;
-  background-color: #252525;
-  width: 60px;
-  height: 60px;
-  bottom: 0;
-  right: 0;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  bottom: 5px;
+  right: 5px;
 `;
 const Enlace = styled.a`
   display: flex;

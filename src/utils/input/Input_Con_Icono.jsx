@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
-import Email_Icono from "@/assets/icons/at.svg";
-
 const Label = styled.label`
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 35px;
   position: relative;
   background-color: #ffffff;
   border: 1px solid #6b6b6b;
+  width: 100%;
+  height: 35px;
   padding: 0 25px 0 5px;
   border-radius: 5px;
   margin-top: 15px;
@@ -37,19 +35,32 @@ const Input = styled.input`
   outline: none;
   font-size: 16.5px;
   font-family: var(--descripciones);
-  font-weight: 500;
 `;
 
-const Email_Input = () => {
+const Input_Con_Icono = ({
+  htmlAndId,
+  labelText,
+  type,
+  placeHolder,
+  src,
+  value,
+  onChange,
+}) => {
   return (
     <>
-      <Label htmlFor="Email">
-        <p>Email:</p>
-        <Imagen src={Email_Icono} alt="" />
-        <Input type="text" id="Email" placeholder="Correo electronico" />
+      <Label htmlFor={htmlAndId}>
+        <p>{labelText}</p>
+        <Input
+          type={type}
+          id={htmlAndId}
+          placeholder={placeHolder}
+          value={value}
+          onChange={onChange}
+        />
+        <Imagen src={src} />
       </Label>
     </>
   );
 };
 
-export default Email_Input;
+export default Input_Con_Icono;

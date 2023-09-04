@@ -4,57 +4,67 @@ import styled from "styled-components";
 import Select_Ubicacion from "./Select_Ubicacion";
 import Select_TipoDeInmueble from "./Select_TipoDeInmueble";
 import Select_RangoDePrecio from "./Select_RangoDePrecio";
-import Button_Buscar from "./Button_Buscar";
 
 import Ubicacion_Icono from "@/assets/icons/ubicacion.svg";
 import Departamento_Icono from "@/assets/icons/apartment.svg";
 import Casa_Icono from "@/assets/icons/house.svg";
 import Dolar_Icono from "@/assets/icons/money.svg";
+import Buscar_Icono from "@/assets/icons/search.svg";
+import Button_Icono from "@/utils/buttons/Button_Icono";
 
-const Main = styled.section`
+const Section = styled.section`
   display: flex;
   flex-direction: column;
-  background-color: #eeeeee;
-  border-radius: 10px;
-  padding: 20px 2% 35px 2%;
+  background-color: var(--backgroundSections0);
+  border-radius: var(--borderRadiusSection);
+  padding: var(--padddingSection);
   gap: 20px;
-
-  @media (max-width: 650px) {
-    border-radius: 0;
-  }
 `;
-const Contenedor_Button_Filtros = styled.div`
+const Contenedor = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  @media (max-width: 1000px) {
-    justify-content: center;
+  justify-content: center;
+  gap: 20px;
+  @media screen and (min-width: 769px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 const Contenedor_Filtros = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 900px;
+  max-width: 950px;
 
-  @media (max-width: 1000px) {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+  gap: 10px;
+
+
+  @media screen and (min-width: 769px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
   }
 `;
 const Titulo = styled.div`
   display: flex;
-  gap: 8px;
-
+  flex-direction: column;
+  text-align: center;
   em {
-    font-size: 26px;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 23px;
+    color: var(--textColor);
   }
 
-  @media (max-width: 650px) {
-    justify-content: center;
+  @media screen and (min-width: 769px) {
+    flex-direction: row;
+    text-align: left;
+    gap: 8px;
+    em {
+      font-size: 25px;
+    }
   }
 `;
 
@@ -98,13 +108,13 @@ const Filtro = () => {
 
   return (
     <>
-      <Main>
+      <Section>
         <Titulo>
           <h1>Encuentra tu</h1>
           <em>hogar ideal </em>
         </Titulo>
 
-        <Contenedor_Button_Filtros>
+        <Contenedor>
           <Contenedor_Filtros>
             <Select_Ubicacion
               data={ubicacionArray}
@@ -123,9 +133,14 @@ const Filtro = () => {
             />
           </Contenedor_Filtros>
 
-          <Button_Buscar />
-        </Contenedor_Button_Filtros>
-      </Main>
+          <Button_Icono
+            type="button"
+            onClick=""
+            src={Buscar_Icono}
+            texto="Buscar mi propiedad"
+          />
+        </Contenedor>
+      </Section>
     </>
   );
 };

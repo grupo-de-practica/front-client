@@ -2,64 +2,83 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import Inmueble_Card from "@/utils/Inmueble/Inmueble_card";
+import Button_Sin_Icono from "@/utils/buttons/Button_Sin_Icono";
 
-const Main = styled.section`
+const Section = styled.section`
   display: flex;
   flex-direction: column;
-  background-color: var(--background-white);
-  border-radius: 10px;
-  padding: 20px 2% 35px 2%;
-  gap: 20px;
+  align-items: center;
+  background-color: var(--backgroundSections0);
+  border-radius: var(--borderRadiusSection);
+  padding: var(--padddingSection);
+  gap: 25px;
+`;
+const Titulo = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  em {
+    font-weight: 600;
+    font-size: 23px;
+    color: var(--textColor);
+  }
 
-  @media (max-width: 650px) {
-    border-radius: 0;
+  @media screen and (min-width: 769px) {
+    flex-direction: row;
+    text-align: left;
+    gap: 8px;
+    em {
+      font-size: 25px;
+    }
   }
 `;
 const Contenedor_Titulo_Button = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  @media screen and (min-width: 769px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 `;
 const Contenedor_Inmuebles = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px 0;
+  display: grid;
+  width: 100%;
+  gap: 2rem 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 `;
-const Btn = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  height: 38px;
-  width: max-content;
-  border-radius: 5px;
-  padding: 0 15px;
-  background-color: var(--icons-color);
-  border: none;
-  color: white;
-  p {
-    font-weight: 500;
+const Escritorio = styled.div`
+  display: none;
+  @media screen and (min-width: 769px) {
+    display: block;
   }
+`;
 
-  @media (max-width: 650px) {
-   margin: 15px auto 5px auto;
-
+const Mobile = styled.div`
+  @media screen and (min-width: 769px) {
+    display: none;
   }
 `;
 const Agregado = () => {
   const navigate = useNavigate();
-  const clickIngresar = () => navigate("/explorar");
+  const clickExplorar = () => navigate("/explorar");
 
   return (
     <>
-      <Main>
+      <Section>
         <Contenedor_Titulo_Button>
-          <h1>Agregado recientemente</h1>
-          <Btn type="button" onClick={clickIngresar}>
-            <p>Ver toda las propiedades</p>
-          </Btn>
+          <Titulo>
+            <h1>Lugares populares</h1>
+            <em>explora</em>
+          </Titulo>
+
+          <Escritorio>
+            <Button_Sin_Icono
+              texto="Ver toda las propiedades"
+              type="button"
+              onClick={clickExplorar}
+            />
+          </Escritorio>
         </Contenedor_Titulo_Button>
 
         <Contenedor_Inmuebles>
@@ -67,12 +86,16 @@ const Agregado = () => {
           <Inmueble_Card />
           <Inmueble_Card />
           <Inmueble_Card />
-          <Inmueble_Card />
-          <Inmueble_Card />
-          <Inmueble_Card />
-          <Inmueble_Card />
         </Contenedor_Inmuebles>
-      </Main>
+
+        <Mobile>
+          <Button_Sin_Icono
+            texto="Ver toda las propiedades"
+            type="button"
+            onClick={clickExplorar}
+          />
+        </Mobile>
+      </Section>
     </>
   );
 };

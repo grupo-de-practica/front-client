@@ -10,14 +10,7 @@ const Main = styled.main`
   flex-direction: column;
   gap: 35px;
   margin-bottom: 100px;
-  padding: 0 2.5%;
-
-  @media (max-width: 1000px) {
-    padding: 0 1%;
-  }
-  @media (max-width: 650px) {
-    padding: 0;
-  }
+  padding: var(--paddingBody);
 `;
 const Inicio = () => {
   return (

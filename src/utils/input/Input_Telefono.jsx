@@ -33,7 +33,6 @@ const Number = styled.input`
   outline: none;
   font-size: 16.5px;
   font-family: var(--descripciones);
-  font-weight: 500;
   background-color: #ffffff;
   border: 1px solid #6b6b6b;
   border-radius: 5px;
@@ -47,13 +46,12 @@ const Prefix = styled.input`
   outline: none;
   font-size: 16.5px;
   font-family: var(--descripciones);
-  font-weight: 500;
   background-color: #ffffff;
   border: 1px solid #6b6b6b;
   border-radius: 5px;
 `;
 
-const Numero_Input = () => {
+const Input_Telefono = () => {
   return (
     <>
       <Label htmlFor="Email">
@@ -66,4 +64,4 @@ const Numero_Input = () => {
   );
 };
 
-export default Numero_Input;
+export default Input_Telefono;

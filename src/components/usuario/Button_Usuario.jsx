@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const Btn = styled.button`
   cursor: pointer;
   display: flex;
@@ -16,11 +15,9 @@ const Btn = styled.button`
   p {
     font-weight: 500;
   }
-
- 
 `;
 
-const Button_Usuario = ({texto}) => {
+const Button_Usuario = ({ texto }) => {
   return (
     <>
       <Btn type="submit">

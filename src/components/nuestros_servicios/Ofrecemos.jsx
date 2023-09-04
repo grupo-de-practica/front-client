@@ -9,45 +9,56 @@ import Pick3 from "@/assets/img/pick3.jpg";
 const Main = styled.section`
   display: flex;
   flex-direction: column;
-  background-color: #252525;
-  border-radius: 10px;
-  padding: 20px 2% 25px 2%;
+  background-color: var(--backgroundSections1);
+  border-radius: var(--borderRadiusSection);
+  padding: var(--padddingSection);
   gap: 20px;
   h1 {
     color: white;
   }
+`;
 
-  @media (max-width: 650px) {
-    border-radius: 0;
+const Titulo = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  em {
+    font-weight: 600;
+    font-size: 23px;
+    color: var(--textColor);
+  }
+
+  @media screen and (min-width: 769px) {
+    flex-direction: row;
+    text-align: left;
+    gap: 8px;
+    em {
+      font-size: 25px;
+    }
   }
 `;
-const Review = styled.div`
+
+const Contenedor = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px 0;
-
-  @media (max-width: 1000px) {
-  justify-content: center;
-  gap: 25px 25px;
-  }
-
-  @media (max-width: 650px) {
-    justify-content: center;
-    gap: 20px;
-  }
+  gap: 25px 0;
+  margin-bottom: 10px;
 `;
 
 const Ofrecemos = () => {
   return (
     <>
       <Main>
-        <h1>¿Perdido en el Mundo Inmobiliario?</h1>
+        <Titulo>
+          <h1>¿Estas perdido?</h1>
+          <em>te ayudaremos</em>
+        </Titulo>
 
-        <Review>
+        <Contenedor>
           <Servicios
             name="Asesoramiento"
-            desc="Orientación experta para decisiones inmobiliarias inteligentes y seguras."
+            desc="Te guiaremos desde el principio."
             href="/"
             img={Pick1}
           />
@@ -63,7 +74,7 @@ const Ofrecemos = () => {
             href="/"
             img={Pick3}
           />
-        </Review>
+        </Contenedor>
       </Main>
     </>
   );
