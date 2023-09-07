@@ -32,7 +32,6 @@ const Number = styled.input`
   border: none;
   outline: none;
   font-size: 16.5px;
-  font-family: var(--descripciones);
   background-color: #ffffff;
   border: 1px solid #6b6b6b;
   border-radius: 5px;
@@ -45,7 +44,6 @@ const Prefix = styled.input`
   border: none;
   outline: none;
   font-size: 16.5px;
-  font-family: var(--descripciones);
   background-color: #ffffff;
   border: 1px solid #6b6b6b;
   border-radius: 5px;

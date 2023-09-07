@@ -84,6 +84,9 @@ u {
   font-size: 16.5px;
   font-family: var(--textos);
 }
+input {
+  font-family: var(--textos);
+}
 
 b,
 button {

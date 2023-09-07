@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import Agregado from "@/components/agregado_recientemente/Agregado";
-import Ofrecemos from "@/components/nuestros_servicios/Ofrecemos";
-import Filtro from "@/components/buscar_por_filtro/Filtro";
-import Header from "@/components/header/Header";
+import Agregado from "@/components/agregadoRecientemente/Agregado";
+import Ofrecemos from "@/components/principalesServicios/Ofrecemos";
+import Filtro from "@/components/filtroLandingPage/Filtro";
+import Header from "@/components/headerLandingPage/Header";
 
 const Main = styled.main`
   display: flex;
@@ -12,7 +12,7 @@ const Main = styled.main`
   margin-bottom: 100px;
   padding: var(--paddingBody);
 `;
-const Inicio = () => {
+const Desktop  = () => {
   return (
     <>
       <Main>
@@ -25,4 +25,4 @@ const Inicio = () => {
   );
 };
 
-export default Inicio;
+export default Desktop;

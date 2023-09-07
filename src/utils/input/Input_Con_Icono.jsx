@@ -34,7 +34,7 @@ const Input = styled.input`
   border: none;
   outline: none;
   font-size: 16.5px;
-  font-family: var(--descripciones);
+
 `;
 
 const Input_Con_Icono = ({

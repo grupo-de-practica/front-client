@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import Guardado from "@/components/usuario_guardado/Guardado";
+import Guardado from "@/components/usuarioFavorito/Guardado";
 
 const Main = styled.main`
   display: flex;

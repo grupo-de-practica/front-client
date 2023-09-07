@@ -1,4 +1,4 @@
-import Informacion from "@/components/informacion_ayuda/Informacion";
+import Informacion from "@/components/informacionAcordeon/Informacion";
 import styled from "styled-components";
 
 const Main = styled.main`

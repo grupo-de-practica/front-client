@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import Inmueble from "@/components/inmueble_solo/Inmueble";
+import Inmueble from "@/components/detallesInmueble/Inmueble";
 
 const Main = styled.main`
   display: flex;
