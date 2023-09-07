@@ -17,8 +17,6 @@
   --textos: "Hind Vadodara", sans-serif;
 }
 
-
-
 @media screen and (min-width: 568px) and (max-width: 768px) {
   :root {
     --paddingNavigation: 0 3%;
