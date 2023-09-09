@@ -16,7 +16,6 @@ const Main = styled.div`
   max-width: 300px;
   border-radius: 10px;
   overflow: hidden;
-  margin: auto;
   background-color: white;
 `;
 const Iconos = styled.img`

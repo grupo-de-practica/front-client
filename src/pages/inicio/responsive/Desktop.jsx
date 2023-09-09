@@ -1,25 +1,56 @@
 import styled from "styled-components";
 
-import Agregado from "@/components/agregadoRecientemente/Agregado";
-import Ofrecemos from "@/components/principalesServicios/Ofrecemos";
+import Imagen from "@/components/headerLandingPage/Imagen";
+import Informacion from "@/components/headerLandingPage/Informacion";
 import Filtro from "@/components/filtroLandingPage/Filtro";
-import Header from "@/components/headerLandingPage/Header";
+import Ofrecemos from "@/components/principalesServicios/Ofrecemos";
+import Agregado from "@/components/agregadoRecientemente/Agregado";
 
 const Main = styled.main`
   display: flex;
+  width: 100%;
+  max-width: 1300px;
+  margin: 30px auto;
   flex-direction: column;
-  gap: 35px;
-  margin-bottom: 100px;
-  padding: var(--paddingBody);
+  align-items: center;
+  gap: 30px;
+  padding: 0 1%;
 `;
-const Desktop  = () => {
+const ContenedorHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+`;
+const ContenedorFiltro = styled.div`
+  width: 100%;
+`;
+const ServiciosPrincipales = styled.div`
+  width: 100%;
+`;
+const AgregadoRecientemente = styled.div`
+  width: 100%;
+`;
+const Desktop = () => {
   return (
     <>
       <Main>
-        <Header />
-        <Filtro />
-        <Ofrecemos />
-        <Agregado />
+        <ContenedorHeader>
+          <Informacion />
+          <Imagen />
+        </ContenedorHeader>
+
+        <ContenedorFiltro>
+          <Filtro />
+        </ContenedorFiltro>
+
+        <ServiciosPrincipales>
+          <Ofrecemos />
+        </ServiciosPrincipales>
+
+        <AgregadoRecientemente>
+          <Agregado />
+        </AgregadoRecientemente>
       </Main>
     </>
   );

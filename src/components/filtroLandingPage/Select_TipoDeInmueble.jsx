@@ -6,7 +6,7 @@ const Main = styled.div`
   justify-content: center;
   align-items: start;
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
   position: relative;
 `;
 

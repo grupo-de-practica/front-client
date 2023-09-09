@@ -8,19 +8,25 @@ const Contenedor = styled.div`
   .Destacado {
     color: var(--textColor);
   }
+  @media (max-width: 1000px) {
+    justify-content: center;
+  }
+  @media (max-width: 700px) {
+    justify-content: left;
+  }
 `;
 
-const Titulo = () => {
+const TituloSection = ({ h1, h1Strong }) => {
   return (
     <>
       <Contenedor>
         <h1>
-          Compra propiedades
-          <span className="Destacado"> de la forma más rápida</span>
+          {h1}
+          <span className="Destacado"> {h1Strong}</span>
         </h1>
       </Contenedor>
     </>
   );
 };
 
-export default Titulo;
+export default TituloSection;

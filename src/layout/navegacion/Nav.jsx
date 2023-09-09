@@ -10,19 +10,20 @@ import Menu_Icono from "@/assets/icons/menu.svg";
 import Logo_Icono from "@/assets/img/Logo.png";
 
 const Navegacion = styled.nav`
+  background-color: var(--backgroundSections1);
+`;
+const ContenedorNavegacion = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
-  padding: var(--paddingNavigation);
-  background-color: var(--backgroundSections1);
-  margin: 0 0 30px 0;
+  height: 55px;
   position: relative;
-
-  @media (max-width: 650px) {
-    border-bottom: 2px solid #343434;
-  }
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 1%;
 `;
+
 const Logo = styled.a`
   height: 35px;
   width: 100px;
@@ -41,7 +42,7 @@ const Contenedor_Enlaces = styled.div`
   display: flex;
   gap: 25px;
 
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     display: none;
   }
 `;
@@ -50,16 +51,11 @@ const StyledNavLink = styled(NavLink)`
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: linear 0.25s;
+  transition: linear 0.35s;
+  font-size: 17px;
   &.active {
     color: var(--icons-color);
-
-    transform: scale(1.2);
-  }
-
-  &:not(.active):hover {
-    color: #c2dfff;
-    transform: scale(1.05);
+    transform: scale(1.15);
   }
 `;
 const Btn_Menu = styled.button`
@@ -74,7 +70,7 @@ const Btn_Menu = styled.button`
     height: 30px;
     width: 30px;
   }
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     display: none;
   }
 `;
@@ -89,30 +85,32 @@ const Nav = () => {
   return (
     <>
       <Navegacion>
-        <Logo href="/">
-          <img src={Logo_Icono} alt="" />
-        </Logo>
+        <ContenedorNavegacion>
+          <Logo href="/">
+            <img src={Logo_Icono} alt="" />
+          </Logo>
 
-        <Contenedor_Enlaces>
-          <StyledNavLink to="/">Inicio</StyledNavLink>
-          <StyledNavLink to="explorar">Explorar</StyledNavLink>
-          <StyledNavLink to="informacion">Informacion</StyledNavLink>
-          <StyledNavLink to="guardado">Guardado</StyledNavLink>
-        </Contenedor_Enlaces>
+          <Contenedor_Enlaces>
+            <StyledNavLink to="/">Inicio</StyledNavLink>
+            <StyledNavLink to="explorar">Explorar</StyledNavLink>
+            <StyledNavLink to="informacion">Informacion</StyledNavLink>
+            <StyledNavLink to="guardado">Guardado</StyledNavLink>
+          </Contenedor_Enlaces>
 
-        <Contenedor_Enlaces>
-          <Button_Pequeño
-            texto="Ingresar"
-            type="button"
-            onClick={clickIngresar}
-          />
-        </Contenedor_Enlaces>
+          <Contenedor_Enlaces>
+            <Button_Pequeño
+              texto="Ingresar"
+              type="button"
+              onClick={clickIngresar}
+            />
+          </Contenedor_Enlaces>
 
-        <Btn_Menu onClick={toggleMenu}>
-          <img src={Menu_Icono} alt="" />
-        </Btn_Menu>
+          <Btn_Menu onClick={toggleMenu}>
+            <img src={Menu_Icono} alt="" />
+          </Btn_Menu>
 
-        <AnimatePresence>{visibleMenu && <Mobile />}</AnimatePresence>
+          <AnimatePresence>{visibleMenu && <Mobile />}</AnimatePresence>
+        </ContenedorNavegacion>
       </Navegacion>
     </>
   );

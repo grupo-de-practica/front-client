@@ -3,57 +3,50 @@ import styled from "styled-components";
 import Servicios from "./Servicios";
 
 import Pick1 from "@/assets/img/pick5.jpg";
-import Pick2 from "@/assets/img/pick2.jpg";
-import Pick3 from "@/assets/img/pick3.jpg";
+import Pick2 from "@/assets/img/pick3.jpg";
+import Pick3 from "@/assets/img/pick4.jpg";
+import TituloSection from "@/utils/TituloSection";
 
 const Main = styled.section`
   display: flex;
   flex-direction: column;
   background-color: var(--backgroundSections1);
-  border-radius: var(--borderRadiusSection);
-  padding: var(--padddingSection);
+  border-radius: 15px;
   gap: 20px;
+  padding: 15px 25px 25px 25px;
   h1 {
     color: white;
   }
 `;
-
-const Titulo = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  em {
-    font-weight: 600;
-    font-size: 23px;
-    color: var(--textColor);
-  }
-
-  @media screen and (min-width: 769px) {
-    flex-direction: row;
-    text-align: left;
-    gap: 8px;
-    em {
-      font-size: 25px;
-    }
-  }
-`;
-
 const Contenedor = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 25px 0;
-  margin-bottom: 10px;
+  gap: 25px 30px;
+
+  @media (max-width: 1100px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+   justify-items: center;
+
+    > :last-child {
+      grid-area: 2 / 1 / 3 / 3;
+    }
+  }
+
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const Ofrecemos = () => {
   return (
     <>
       <Main>
-        <Titulo>
-          <h1>¿Estas perdido?</h1>
-          <em>te ayudaremos</em>
-        </Titulo>
+        <TituloSection h1="¿Estas perdido?" h1Strong="te ayudaremos" />
 
         <Contenedor>
           <Servicios

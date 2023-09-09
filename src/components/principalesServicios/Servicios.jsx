@@ -20,7 +20,7 @@ const Contenedor_Texto = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding: 10px 15px;
+  padding: 10px 15px 5px 15px;
 
   .class {
     font-weight: 600;
@@ -30,9 +30,19 @@ const Contenedor_Texto = styled.div`
 const Imagen = styled.div`
   aspect-ratio: 16/9;
   width: 100%;
-  height: 160px;
+  height: 200px;
   overflow: hidden;
   margin-top: auto;
+  clip-path: polygon(
+    0% 15%,
+    5% 5%,
+    15% 0%,
+    85% 0%,
+    95% 5%,
+    100% 15%,
+    100% 100%,
+    0 100%
+  );
   img {
     width: 100%;
     height: 100%;

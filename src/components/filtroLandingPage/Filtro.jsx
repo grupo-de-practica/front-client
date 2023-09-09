@@ -11,60 +11,39 @@ import Casa_Icono from "@/assets/icons/house.svg";
 import Dolar_Icono from "@/assets/icons/money.svg";
 import Buscar_Icono from "@/assets/icons/search.svg";
 import Button_Icono from "@/utils/buttons/Button_Icono";
+import TituloSection from "@/utils/TituloSection";
 
 const Section = styled.section`
   display: flex;
+  width: 100%;
   flex-direction: column;
   background-color: var(--backgroundSections0);
-  border-radius: var(--borderRadiusSection);
-  padding: var(--padddingSection);
-  gap: 20px;
+  border-radius: 15px;
+  padding: 15px 25px 20px 25px;
 `;
 const Contenedor = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  @media screen and (min-width: 769px) {
-    flex-direction: row;
-    justify-content: space-between;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 30px;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    gap: 20px;
   }
 `;
-const Contenedor_Filtros = styled.div`
+const ContenedorFiltros = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 950px;
-
+  max-width: 750px;
   gap: 10px;
-
-
-  @media screen and (min-width: 769px) {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 25px;
-  }
-`;
-const Titulo = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  em {
-    font-weight: 600;
-    font-size: 23px;
-    color: var(--textColor);
-  }
-
-  @media screen and (min-width: 769px) {
-    flex-direction: row;
-    text-align: left;
-    gap: 8px;
-    em {
-      font-size: 25px;
-    }
+  justify-content: space-between;
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -109,13 +88,10 @@ const Filtro = () => {
   return (
     <>
       <Section>
-        <Titulo>
-          <h1>Encuentra tu</h1>
-          <em>hogar ideal </em>
-        </Titulo>
+        <TituloSection h1="Encuentra tu" h1Strong="hogar ideal" />
 
         <Contenedor>
-          <Contenedor_Filtros>
+          <ContenedorFiltros>
             <Select_Ubicacion
               data={ubicacionArray}
               value={ubicacionSeleccionado}
@@ -131,7 +107,7 @@ const Filtro = () => {
               value={tipoSeleccionado}
               setValue={setTipoSeleccionado}
             />
-          </Contenedor_Filtros>
+          </ContenedorFiltros>
 
           <Button_Icono
             type="button"

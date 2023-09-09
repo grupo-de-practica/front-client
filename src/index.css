@@ -1,38 +1,14 @@
 :root {
-  --backgroundBody: #ededed;
+  --backgroundBody: #f2f2f2;
 
   --backgroundSections0: rgb(255, 255, 255);
   --backgroundSections1: #252525;
-
-  --borderRadiusSection: 0;
-  --padddingSection: 15px 2.5%;
-
-  --paddingNavigation: 0 2%;
-  --paddingBody: 0;
 
   --icons-color: #65a2ff;
   --textColor: #65a2ff;
 
   --titulos-subtitulos: "Catamaran", sans-serif;
   --textos: "Hind Vadodara", sans-serif;
-}
-
-@media screen and (min-width: 568px) and (max-width: 768px) {
-  :root {
-    --paddingNavigation: 0 3%;
-    --paddingBody: 0 3%;
-    --padddingSection: 15px 2%;
-    --borderRadiusSection: 5px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  :root {
-    --paddingNavigation: 0 3.5%;
-    --paddingBody: 0 3.5%;
-    --padddingSection: 20px 2%;
-    --borderRadiusSection: 10px;
-  }
 }
 
 *,

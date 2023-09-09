@@ -13,7 +13,7 @@ const Main = styled(motion.div)`
   background-color: var(--backgroundSections1);
   width: 100%;
   z-index: 15;
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     display: none;
   }
 `;

@@ -3,34 +3,15 @@ import styled from "styled-components";
 
 import Inmueble_Card from "@/utils/Inmueble/Inmueble_card";
 import Button_Sin_Icono from "@/utils/buttons/Button_Sin_Icono";
+import TituloSection from "@/utils/TituloSection";
 
 const Section = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: var(--backgroundSections0);
-  border-radius: var(--borderRadiusSection);
-  padding: var(--padddingSection);
-  gap: 25px;
-`;
-const Titulo = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  em {
-    font-weight: 600;
-    font-size: 23px;
-    color: var(--textColor);
-  }
-
-  @media screen and (min-width: 769px) {
-    flex-direction: row;
-    text-align: left;
-    gap: 8px;
-    em {
-      font-size: 25px;
-    }
-  }
+  border-radius: 15px;
+  gap: 20px;
+  padding: 15px 25px 25px 25px;
 `;
 const Contenedor_Titulo_Button = styled.div`
   @media screen and (min-width: 769px) {
@@ -40,22 +21,65 @@ const Contenedor_Titulo_Button = styled.div`
     align-items: center;
     width: 100%;
   }
+
+  @media (max-width: 1000px) {
+    justify-content: center;
+  }
 `;
 const Contenedor_Inmuebles = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 10px;
   width: 100%;
-  gap: 2rem 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  @media (max-width: 700px) {
+    > :last-child {
+      display: none;
+    }
+  }
 `;
+const FilaInmueble = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 0 30px;
+
+  @media (max-width: 1200px) {
+    > :last-child {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-items: center;
+    align-items: center;
+    > :last-child {
+      display: block;
+    }
+  }
+
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
 const Escritorio = styled.div`
   display: none;
-  @media screen and (min-width: 769px) {
+  @media (min-width: 1001px) {
     display: block;
   }
 `;
 
 const Mobile = styled.div`
-  @media screen and (min-width: 769px) {
+  margin: auto;
+  @media screen and (min-width: 1000px) {
     display: none;
   }
 `;
@@ -67,10 +91,7 @@ const Agregado = () => {
     <>
       <Section>
         <Contenedor_Titulo_Button>
-          <Titulo>
-            <h1>Lugares populares</h1>
-            <em>explora</em>
-          </Titulo>
+          <TituloSection h1="Inmuebles" h1Strong="populares" />
 
           <Escritorio>
             <Button_Sin_Icono
@@ -82,10 +103,19 @@ const Agregado = () => {
         </Contenedor_Titulo_Button>
 
         <Contenedor_Inmuebles>
-          <Inmueble_Card />
-          <Inmueble_Card />
-          <Inmueble_Card />
-          <Inmueble_Card />
+          <FilaInmueble>
+            <Inmueble_Card />
+            <Inmueble_Card />
+            <Inmueble_Card />
+            <Inmueble_Card />
+          </FilaInmueble>
+
+          <FilaInmueble>
+            <Inmueble_Card />
+            <Inmueble_Card />
+            <Inmueble_Card />
+            <Inmueble_Card />
+          </FilaInmueble>
         </Contenedor_Inmuebles>
 
         <Mobile>
