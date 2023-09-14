@@ -27,7 +27,9 @@ const Contenedor = styled.div`
   justify-content: space-between;
   margin-top: 15px;
   gap: 30px;
-
+  background-color: white;
+  border-radius: 5px;
+  padding-right: 15px;
   @media (max-width: 1100px) {
     flex-direction: column;
     gap: 20px;
@@ -37,10 +39,7 @@ const ContenedorFiltros = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 750px;
-  gap: 10px;
-  justify-content: space-between;
+
   @media (max-width: 700px) {
     display: flex;
     flex-direction: column;
@@ -97,15 +96,15 @@ const Filtro = () => {
               value={ubicacionSeleccionado}
               setValue={setUbicacionSeleccionado}
             />
-            <Select_RangoDePrecio
-              data={rangoDePrecio}
-              value={rangoSeleccionado}
-              setValue={setRangoSeleccionado}
-            />
             <Select_TipoDeInmueble
               data={tipoDeInmueble}
               value={tipoSeleccionado}
               setValue={setTipoSeleccionado}
+            />
+            <Select_RangoDePrecio
+              data={rangoDePrecio}
+              value={rangoSeleccionado}
+              setValue={setRangoSeleccionado}
             />
           </ContenedorFiltros>
 

@@ -20,6 +20,9 @@ const InicoPage = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  console.log(import.meta.env.VITE_LOGIN_ADMIN)
+  
   return (
     <>
       {windowWidth >= 1100 && <Desktop />}

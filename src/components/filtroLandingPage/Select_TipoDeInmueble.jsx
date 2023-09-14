@@ -1,33 +1,50 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
+
+import IconsFlecha from "@/assets/icons/chevron-down-outline.svg";
 
 const Main = styled.div`
   display: flex;
   justify-content: center;
   align-items: start;
   width: 100%;
-  max-width: 200px;
+  max-width: 300px;
+  min-width: 280px;
   position: relative;
 `;
-
-const Seleccionado = styled.div`
+const ContenedorSeleccionado = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: left;
+  flex-direction: column;
+  justify-content: center;
   cursor: pointer;
-  border: 1px solid #ddd;
   background-color: white;
   width: 100%;
   gap: 8px;
-  border-radius: 15px;
-  padding: 14px 15px;
+  position: relative;
+  padding: 10px 15px;
+  ::after {
+    content: "";
+    position: absolute;
+    height: 60%;
+    width: 1px;
+    border-right: 2px solid #ddd;
+    right: 0;
+  }
+`;
+const Seleccionado = styled.div`
+  display: flex;
+  gap: 5px;
+  p {
+    font-weight: 500;
+  }
   img {
     height: 18px;
     width: 18px;
   }
-  p {
-    font-weight: 500;
-  }
+`;
+const Name = styled.p`
+  color: #a0a0a0;
+  font-size: 14px;
 `;
 const Contenedor_Opciones = styled.div`
   display: flex;
@@ -35,12 +52,12 @@ const Contenedor_Opciones = styled.div`
   position: absolute;
   flex-direction: column;
   background-color: white;
-  border: 1px solid #ddd;
-  width: 95%;
+  border: 1px solid #f1f1f1;
+  width: 100%;
   border-radius: 5px;
+  margin-top: 5px;
   top: 100%;
-  margin-top: 10px;
-  z-index: 2;
+  z-index: 3;
 `;
 
 const Opcion = styled.div`
@@ -59,19 +76,47 @@ const Opcion = styled.div`
     width: 18px;
   }
 `;
+const Flecha = styled.img`
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 15px;
+`;
 
 const Select_TipoDeInmueble = ({ data, value, setValue }) => {
+  const outsideClickRef = useRef();
   const [visible, setVisible] = useState(false);
 
   const toggleVisible = () => setVisible(!visible);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        outsideClickRef.current &&
+        !outsideClickRef.current.contains(event.target)
+      ) {
+        setVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <Main>
-        <Seleccionado onClick={toggleVisible}>
-          <img src={value.icono} alt="" />
-          <p>{value.name}</p>
-        </Seleccionado>
+        <ContenedorSeleccionado onClick={toggleVisible} ref={outsideClickRef}>
+          <Name>Tipo</Name>
+          <Seleccionado>
+            <img src={value.icono} alt="" />
+            <p>{value.name}</p>
+            <Flecha src={IconsFlecha} alt="Flecha apuntando hacia abajo" />
+          </Seleccionado>
+        </ContenedorSeleccionado>
 
         {visible && (
           <Contenedor_Opciones>

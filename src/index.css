@@ -1,7 +1,7 @@
 :root {
-  --backgroundBody: #f2f2f2;
+  --backgroundBody: #ffffff;
 
-  --backgroundSections0: rgb(255, 255, 255);
+  --backgroundSections0: #f6f6f7;
   --backgroundSections1: #252525;
 
   --icons-color: #65a2ff;
@@ -33,6 +33,7 @@ h6 {
 }
 h1 {
   font-size: 27px;
+  margin: 0;
 }
 h2 {
   font-size: 25px;
@@ -64,8 +65,7 @@ input {
   font-family: var(--textos);
 }
 
-b,
-button {
+b {
   font-weight: 500;
 }
 

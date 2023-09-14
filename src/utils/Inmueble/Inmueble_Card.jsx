@@ -36,8 +36,6 @@ const Informacion = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border: 1px solid #ddd;
-  border-color: transparent #ddd #ddd #ddd;
   border-radius: 0 0 10px 10px;
 `;
 const Contenedor_Precio_Ubicacion = styled.div`
@@ -62,7 +60,7 @@ const Ubicacion = styled.div`
 const Contenedor_Adicional = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+  padding: 8px 6px;
   width: 95%;
   margin: auto;
   border-top: 1px solid #ddd;
